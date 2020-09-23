@@ -6,13 +6,13 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
 	}
 })
 	.then(response => {
-		console.log(response);
+		// console.log(response);
 		return response.json()
 	})
 	.then(function (data) {
 		let countryData = data
 
-		const countryNames = []
+		let countryNames = []
 		const countryPopulation = []
 		const countryArea = []
 		for (let i = 0; i < 250; i++) {
@@ -27,19 +27,28 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
 			createOptions.appendChild(countryOptionTextnode);
 			selectionOfCountries.appendChild(createOptions)
 
-			// choose and append a countryName 
+
 		}
-		console.log(countryData);
+
+		// Generate random number between 0 to 250 
+		let randomNum = Math.floor(Math.random() *250); 
+		// console.log(randomNum)
+
+			// choose and append a countryName 
+			let quizCountryName = document.getElementById('quiz-countryName')
+			const createPContryName = document.createElement('p')
+			const countryNameTextnode = document.createTextNode(countryNames[randomNum]);
+			createPContryName.appendChild(countryNameTextnode);
+			quizCountryName.appendChild(createPContryName)
+
+
+		// console.log(countryData);
 		// console.log(countryNames);
 		// console.log(countryPopulation);
 		// console.log(countryArea);
-
-
-
 
 	})
 	// .catch(err => {
 
 	// });
-
 
