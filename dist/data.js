@@ -54,7 +54,7 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
 		const createPCountryName = document.createElement('p')
 		const countryNameTextnode = document.createTextNode(countryNames[randomNum]);
 		createPCountryName.appendChild(countryNameTextnode);
-		quizCountryName.appendChild(createPCountryName)
+		quizCountryName = createPCountryName
 
 		// console.log(countryData);
 		// console.log(countryNames);
@@ -78,22 +78,37 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
 		}
 
 		console.log(areaCalculator(countryArea[randomNum], jpn.area))
+
+		// append options in choices between 1-3
+
+	const answer = document.getElementById('answer')
+	answer.textContent = areaCalculator(countryArea[randomNum], jpn.area)
 	}
 
 
 
 
-// let checkAnswerBtn = document.getElementById('checkAnswerBtn')
-// checkAnswerBtn.addEventListener('click', () => {
-// 	alert('hey')
-// })
-// 	let startBtn = document.getElementById('startBtn')
-// startBtn.addEventListener('click', () => {
 
-// })
+
+
 
 
 // 	// .catch(err => {
 
 // 	// });
 	)
+
+
+	let selectionOfCountries = document.getElementById('selectionOfCountries')
+	selectionOfCountries.addEventListener('change', function(e)  {
+		console.log(this.value)
+// 	let familerCtrArr = []
+
+// familerCtrArr.push(selectionOfCountries.textContent)
+})
+
+
+// let checkAnswerBtn = document.getElementById('checkAnswerBtn')
+// checkAnswerBtn.addEventListener('click', () => {
+// 	alert('hey')
+// })
