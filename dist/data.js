@@ -95,18 +95,34 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
 
 // 	// .catch(err => {
 
-// 	// });
-	)
+	// });
 
+)
 
+for (let i = 0; i < countryNames.length; i++) {
+		if (userInfo = countryNames[i]) {
+			return countryNames[i] + 'hey'
+		}
+		
+	}
+	
+
+const userInfo = []
 	let selectionOfCountries = document.getElementById('selectionOfCountries')
 	selectionOfCountries.addEventListener('change', function(e)  {
-		console.log(this.value)
-// 	let familerCtrArr = []
-
-// familerCtrArr.push(selectionOfCountries.textContent)
+		// console.log(this.value)
+	userInfo.push(this.value)
+	console.log(userInfo)
 })
 
+
+
+// let selectionOfUnits = document.getElementById('selectionOfUnits')
+// selectionOfUnits.addEventListener('change', function(e)  {
+// 	// console.log(this.value)
+// userInfo.push(this.value)
+// console.log(userInfo)
+// })
 
 // let checkAnswerBtn = document.getElementById('checkAnswerBtn')
 // checkAnswerBtn.addEventListener('click', () => {
