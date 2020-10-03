@@ -62,10 +62,23 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
 		// console.log(countryArea);
 
 		// Generate options
-		const jpn = {
-			name: 'japan',
-			area: 377930,
-		}
+		let numOffamiCtr
+		let userInfo
+		let selectionOfCountries = document.getElementById('selectionOfCountries')
+		selectionOfCountries.addEventListener('change', function (e) {
+			// console.log(this.value)
+			userInfo = this.value
+			// console.log(userInfo)			
+			numOffamiCtr = countryNames.indexOf(userInfo)
+			console.log(numOffamiCtr)
+
+
+		})
+
+		// const jpn = {
+		// 	name: 'japan',
+		// 	area: 377930,
+		// }
 
 		function areaCalculator(quizCtr, familerCtr) {
 
@@ -74,46 +87,38 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
 			} else {
 				return countryNames[randomNum] + " is " + Math.round(familerCtr / quizCtr) + " times smaller" + " than " + familerCtr + " ."
 			}
-
 		}
+		console.log(areaCalculator(countryArea[randomNum], countryArea[numOffamiCtr]))
 
-		console.log(areaCalculator(countryArea[randomNum], jpn.area))
+
 
 		// append options in choices between 1-3
 
-	const answer = document.getElementById('answer')
-	answer.textContent = areaCalculator(countryArea[randomNum], jpn.area)
+		// const answer = document.getElementById('answer')
+		// answer.textContent = areaCalculator(countryArea[randomNum], countryArea[6])
 	}
 
+		// 	// .catch(err => {
+
+		// });
+
+	)
+
+// for (let i = 0; i < countryNames.length; i++) {
+// 		if (userInfo = countryNames[i]) {
+// 			return countryNames[i] + 'hey'
+// 		}
+
+// 	}
 
 
-
-
-
-
-
-
-// 	// .catch(err => {
-
-	// });
-
-)
-
-for (let i = 0; i < countryNames.length; i++) {
-		if (userInfo = countryNames[i]) {
-			return countryNames[i] + 'hey'
-		}
-		
-	}
-	
-
-const userInfo = []
-	let selectionOfCountries = document.getElementById('selectionOfCountries')
-	selectionOfCountries.addEventListener('change', function(e)  {
-		// console.log(this.value)
-	userInfo.push(this.value)
-	console.log(userInfo)
-})
+// userInfo = []
+// 	let selectionOfCountries = document.getElementById('selectionOfCountries')
+// 	selectionOfCountries.addEventListener('change', function(e)  {
+// 		// console.log(this.value)
+// 	userInfo.push(this.value.length)
+// 	console.log(userInfo)
+// })
 
 
 
