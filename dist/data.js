@@ -62,23 +62,19 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
 		// console.log(countryArea);
 
 		// Generate options
-		let numOffamiCtr
-		let userInfo
+		let numOffamiCtr;
+		let userInfo;
 		let selectionOfCountries = document.getElementById('selectionOfCountries')
 		selectionOfCountries.addEventListener('change', function (e) {
 			// console.log(this.value)
 			userInfo = this.value
-			// console.log(userInfo)			
+			console.log(userInfo)			
 			numOffamiCtr = countryNames.indexOf(userInfo)
-			console.log(numOffamiCtr)
-
-
+	console.log(numOffamiCtr)
 		})
+		
+		
 
-		// const jpn = {
-		// 	name: 'japan',
-		// 	area: 377930,
-		// }
 
 		function areaCalculator(quizCtr, familerCtr) {
 
@@ -93,9 +89,9 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
 
 
 		// append options in choices between 1-3
+		const answer = document.getElementById('answer')
+		// answer.textContent = areaCalculator(countryArea[randomNum], countryArea[numOffamiCtr])
 
-		// const answer = document.getElementById('answer')
-		// answer.textContent = areaCalculator(countryArea[randomNum], countryArea[6])
 	}
 
 		// 	// .catch(err => {
@@ -104,12 +100,6 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
 
 	)
 
-// for (let i = 0; i < countryNames.length; i++) {
-// 		if (userInfo = countryNames[i]) {
-// 			return countryNames[i] + 'hey'
-// 		}
-
-// 	}
 
 
 // userInfo = []
