@@ -68,25 +68,40 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
 		selectionOfCountries.addEventListener('change', function (e) {
 			// console.log(this.value)
 			userInfo = this.value
-			console.log(userInfo)			
+			console.log(userInfo)
 			numOffamiCtr = countryNames.indexOf(userInfo)
-	console.log(numOffamiCtr)
+			console.log(numOffamiCtr)
 		})
-		
-		
+
+
 
 
 		function areaCalculator(quizCtr, familerCtr) {
+			// Generate options
+			let familerCtrIndex;
+			let userInfo;
+			let selectionOfCountries = document.getElementById('selectionOfCountries')
+			selectionOfCountries.addEventListener('change', function (e) {
+				// console.log(this.value)
+				userInfo = this.value
+				// console.log(userInfo)
+				familerCtrIndex = countryNames.indexOf(userInfo)
 
-			if (quizCtr > familerCtr) {
-				return countryNames[randomNum] + " is " + Math.round(quizCtr / familerCtr) + " times smaller" + " than " + familerCtr + " ."
-			} else {
-				return countryNames[randomNum] + " is " + Math.round(familerCtr / quizCtr) + " times smaller" + " than " + familerCtr + " ."
-			}
+				console.log(countryArea[familerCtrIndex])
+
+				if (quizCtr > familerCtr) {
+					return countryNames[randomNum] + " is " + Math.round(quizCtr / familerCtr) + " times smaller" + " than " + familerCtr + " ."
+				} else {
+					return countryNames[randomNum] + " is " + Math.round(familerCtr / quizCtr) + " times smaller" + " than " + familerCtr + " ."
+				}
+			})
+
+
+
+
 		}
-		console.log(areaCalculator(countryArea[randomNum], countryArea[numOffamiCtr]))
-
-
+	
+	console.log(areaCalculator(countryArea[randomNum], countryArea[familerCtrIndex]))
 
 		// append options in choices between 1-3
 		const answer = document.getElementById('answer')
