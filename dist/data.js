@@ -42,9 +42,8 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
 			const countryOptionTextnode = document.createTextNode(countryNames[i]);
 			createOptions.appendChild(countryOptionTextnode);
 			selectionOfCountries.appendChild(createOptions)
-
-
 		}
+
 		// Generate random number between 0 to 250 
 		let randomNum = Math.floor(Math.random() * 250);
 		// console.log(randomNum)
@@ -75,14 +74,14 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
 
 
 
-
+			let familerCtrIndex;
+			// let userInfo;
 		function areaCalculator(quizCtr, familerCtr) {
 			// Generate options
-			let familerCtrIndex;
-			let userInfo;
 			let selectionOfCountries = document.getElementById('selectionOfCountries')
+
 			selectionOfCountries.addEventListener('change', function (e) {
-				// console.log(this.value)
+				// console.log(e)
 				userInfo = this.value
 				// console.log(userInfo)
 				familerCtrIndex = countryNames.indexOf(userInfo)
@@ -97,15 +96,13 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
 			})
 
 
-
-
 		}
-	
 	console.log(areaCalculator(countryArea[randomNum], countryArea[familerCtrIndex]))
+	
 
 		// append options in choices between 1-3
 		const answer = document.getElementById('answer')
-		// answer.textContent = areaCalculator(countryArea[randomNum], countryArea[numOffamiCtr])
+		answer.textContent = areaCalculator(countryArea[randomNum], countryArea[numOffamiCtr])
 
 	}
 
