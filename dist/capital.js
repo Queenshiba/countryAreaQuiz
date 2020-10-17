@@ -74,7 +74,7 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
 
 
         console.log(arrFirstNum, arrSecondNum, arrThirdNum)
-        console.log(randomizedFirstIndexForCap, randomizedSecondIndexForCap, randomizedThirdIndexForCap)
+        console.log(countryCap[randomizedFirstIndexForCap], randomizedSecondIndexForCap, randomizedThirdIndexForCap)
 
 
         // append the genarated countryName and capital city
@@ -85,67 +85,81 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
         // append countryCapital in div
         let optionOne = document.getElementById('option1')
         let answerCap = countryCap[randomizedFirstIndexForCap]
-        if (countryCap[randomizedFirstIndexForCap].textContent === '') {
-            countryCap[randomizedFirstIndexForCap].textContent = "there is no capital city."
-        } else {
+
             optionOne.textContent = answerCap
-        }
-
-
+        
 
 
         let optionTwo = document.getElementById('option2')
         let answerOption2 = countryCap[randomizedSecondIndexForCap]
-        if (countryCap[randomizedSecondIndexForCap].textContent === '') {
-            countryCap[randomizedSecondIndexForCap].textContent = "there is no capital city."
-        } else {
             optionTwo.textContent = answerOption2
-        }
-
 
         let optionThree = document.getElementById('option3')
         let answerOption3 = countryCap[randomizedThirdIndexForCap]
-        if (countryCap[randomizedThirdIndexForCap].textContent === '') {
-            countryCap[randomizedThirdIndexForCap].textContent = "there is no capital city."
-        } else {
             optionThree.textContent = answerOption3
-        }
+        
+
+
 
         let option1 = document.getElementById('option1')
         let option2 = document.getElementById('option2')
         let option3 = document.getElementById('option3')
-        
-        console.log(option1.textContent)
-        console.log(countryCap[randomFirstIndexCountry])
+
+
+        if (option1.textContent === '') {
+            option1.textContent = countryName[randomFirstIndexCountry] + " doesn't have a capital city."
+        } 
+        if (option2.textContent === '') {
+            option2.textContent = countryName[randomFirstIndexCountry] + " doesn't have a capital city."
+        } 
+        if (option3.textContent === '') {
+            option3.textContent = countryName[randomFirstIndexCountry] + " doesn't have a capital city."
+        } 
 
         option1.addEventListener('click', () => {
-            if (option1 === countryCap[randomFirstIndexCountry]){
+            if (option1.textContent === countryCap[randomFirstIndexCountry]) {
                 alert('you are right')
             } else {
                 alert('wrong')
             }
-                
-        }) 
+
+        })
         option2.addEventListener('click', () => {
-            if (option2 === countryCap[randomFirstIndexCountry]){
+            if (option2.textContent === countryCap[randomFirstIndexCountry]) {
                 alert('you are right')
             } else {
                 alert('wrong')
             }
         })
-        
+
         option3.addEventListener('click', () => {
-            if (option3 === countryCap[randomFirstIndexCountry]){
+            if (option3.textContent === countryCap[randomFirstIndexCountry]) {
                 alert('you are right')
             } else {
                 alert('wrong')
             }
-        
+
+        })
+
+
+
     })
 
-})
+function goNext() {
+    location.reload();
+}
 
 
+
+// let options = document.getElementsByClassName('option')
+// console.log(options)
+
+// options.addEventListener('click', () => {
+//     // if (alert('wrong')){
+//     //     return goNext()
+//     // }
+    
+// })
 
 let option1 = document.getElementById('option1')
 let option2 = document.getElementById('option2')
