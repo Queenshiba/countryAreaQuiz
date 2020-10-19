@@ -120,7 +120,7 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
             if (option1.textContent === countryCap[randomFirstIndexCountry]) {
                 alert('you are right')
             } else {
-                alert('wrong')
+                alert('wrong. ' + option1.textContent + ' is ' + countryName[randomizedFirstIndexForCap] + "'s capital city." )
             }
 
         })
@@ -128,7 +128,7 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
             if (option2.textContent === countryCap[randomFirstIndexCountry]) {
                 alert('you are right')
             } else {
-                alert('wrong')
+                alert('wrong. ' + option2.textContent + ' is ' + countryName[randomizedSecondIndexForCap] + "'s capital city.")
             }
         })
 
@@ -136,7 +136,7 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
             if (option3.textContent === countryCap[randomFirstIndexCountry]) {
                 alert('you are right')
             } else {
-                alert('wrong')
+                alert('wrong. ' + option3.textContent + ' is ' + countryName[randomizedThirdIndexForCap] + "'s capital city.")
             }
 
         })
