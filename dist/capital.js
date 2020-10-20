@@ -116,28 +116,47 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
             option3.textContent = countryName[randomFirstIndexCountry] + " doesn't have a capital city."
         } 
 
-        option1.addEventListener('click', () => {
+let popupContainer = document.getElementById('popup-container')
+let happyFace = document.getElementById('happyFace')
+let sadFace = document.getElementById('sadFace')
+let result = document.getElementById('result')
+let comment = document.getElementById('comment')
 
+
+        option1.addEventListener('click', () => {
+            popupContainer.style.display = "block"
             if (option1.textContent === countryCap[randomFirstIndexCountry]) {
-                alert('you are right')
+                happyFace.style.display = "block"
+                result.textContent = 'you are right'
             } else {
-                alert('wrong. ' + option1.textContent + ' is ' + countryName[randomizedFirstIndexForCap] + "'s capital city." )
+                sadFace.style.display = "block"
+                result.textContent = 'Wrong' 
+                comment.textContent = option1.textContent + ' is ' + countryName[randomizedFirstIndexForCap] + "'s capital city." 
             }
 
         })
         option2.addEventListener('click', () => {
+            popupContainer.style.display = "block"
+            
             if (option2.textContent === countryCap[randomFirstIndexCountry]) {
-                alert('you are right')
+                happyFace.style.display = "block"
+                result.textContent = 'you are right'
             } else {
-                alert('wrong. ' + option2.textContent + ' is ' + countryName[randomizedSecondIndexForCap] + "'s capital city.")
+                sadFace.style.display = "block"
+                result.textContent = 'Wrong' 
+                comment.textContent =  option2.textContent + ' is ' + countryName[randomizedSecondIndexForCap] + "'s capital city."
             }
         })
 
         option3.addEventListener('click', () => {
+            popupContainer.style.display = "block"
             if (option3.textContent === countryCap[randomFirstIndexCountry]) {
-                alert('you are right')
+                happyFace.style.display = "block"
+                result.textContent = 'you are right'
             } else {
-                alert('wrong. ' + option3.textContent + ' is ' + countryName[randomizedThirdIndexForCap] + "'s capital city.")
+                sadFace.style.display = "block"
+                result.textContent = 'Wrong' 
+                comment.textContent = option3.textContent + ' is ' + countryName[randomizedThirdIndexForCap] + "'s capital city."
             } 
 
         })
