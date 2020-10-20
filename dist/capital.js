@@ -117,6 +117,7 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
         } 
 
         option1.addEventListener('click', () => {
+
             if (option1.textContent === countryCap[randomFirstIndexCountry]) {
                 alert('you are right')
             } else {
@@ -137,7 +138,7 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
                 alert('you are right')
             } else {
                 alert('wrong. ' + option3.textContent + ' is ' + countryName[randomizedThirdIndexForCap] + "'s capital city.")
-            }
+            } 
 
         })
 
