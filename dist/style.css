@@ -3,15 +3,15 @@
     margin: 0;
     background-color: ghostwhite;
     font-family: 'Commissioner', sans-serif;
-
 }
+
 body {
     height: 100vh;
 }
 
 /* pop up content */
+
 #popup-container {
-    
     background-color: violet;
     display: flex;
     flex-direction: column;
@@ -26,13 +26,20 @@ body {
     z-index: 1;
     display: none;
 }
-.face-img img{
+
+#popup-container>div {
+    background-color: tomato;
+}
+
+.face-img img {
     height: 50px;
     width: 50px;
 }
+
 #happyFace {
     display: none;
 }
+
 #sadFace {
     display: none;
 }
@@ -44,14 +51,14 @@ body {
     z-index: 2;
 }
 
+/* title */
+
 .title {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-
-/* title */
 .title p {
     padding: 20px 0;
 }
@@ -63,14 +70,16 @@ body {
 }
 
 /* quiz container */
+
 #countryNameContainer {
     font-size: 1.5em;
     font-weight: bold;
     text-align: center;
     padding: 10px 0;
 }
+
 .option, .button-container {
-    background: white; 
+    background: white;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -78,17 +87,15 @@ body {
     padding: 1rem;
     padding-bottom: 50%;
     padding-top: 50%;
-    box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.16);
-
+    box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.16);
 }
 
-.lows  {
+.lows {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     grid-gap: 1rem;
     margin: 1rem 1rem;
 }
-
 
 .next-btn {
     align-items: center;
@@ -96,10 +103,11 @@ body {
     border: transparent;
     color: white;
     font-size: 1.2em;
-
 }
+
 .button-container {
-background: linear-gradient(to right, #7f7fd5, #86a8e7, #74c0bb); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: linear-gradient(to right, #7f7fd5, #86a8e7, #74c0bb);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 footer {

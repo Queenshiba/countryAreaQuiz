@@ -86,18 +86,18 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
         let optionOne = document.getElementById('option1')
         let answerCap = countryCap[randomizedFirstIndexForCap]
 
-            optionOne.textContent = answerCap
-        
+        optionOne.textContent = answerCap
+
 
 
         let optionTwo = document.getElementById('option2')
         let answerOption2 = countryCap[randomizedSecondIndexForCap]
-            optionTwo.textContent = answerOption2
+        optionTwo.textContent = answerOption2
 
         let optionThree = document.getElementById('option3')
         let answerOption3 = countryCap[randomizedThirdIndexForCap]
-            optionThree.textContent = answerOption3
-        
+        optionThree.textContent = answerOption3
+
 
 
 
@@ -108,19 +108,20 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
 
         if (option1.textContent === '') {
             option1.textContent = countryName[randomFirstIndexCountry] + " doesn't have a capital city."
-        } 
+        }
         if (option2.textContent === '') {
             option2.textContent = countryName[randomFirstIndexCountry] + " doesn't have a capital city."
-        } 
+        }
         if (option3.textContent === '') {
             option3.textContent = countryName[randomFirstIndexCountry] + " doesn't have a capital city."
-        } 
+        }
 
-let popupContainer = document.getElementById('popup-container')
-let happyFace = document.getElementById('happyFace')
-let sadFace = document.getElementById('sadFace')
-let result = document.getElementById('result')
-let comment = document.getElementById('comment')
+        let popupContainer = document.getElementById('popup-container')
+        let happyFace = document.getElementById('happyFace')
+        let sadFace = document.getElementById('sadFace')
+        let result = document.getElementById('result')
+        let comment = document.getElementById('comment')
+
 
 
         option1.addEventListener('click', () => {
@@ -130,21 +131,33 @@ let comment = document.getElementById('comment')
                 result.textContent = 'you are right'
             } else {
                 sadFace.style.display = "block"
-                result.textContent = 'Wrong' 
-                comment.textContent = option1.textContent + ' is ' + countryName[randomizedFirstIndexForCap] + "'s capital city." 
+                result.textContent = 'Wrong'
+                // if (countryName[randomFirstIndexCountry] + " doesn't have a capital city.") {
+                //     return option1.textConten
+                // } else {
+                //     comment.textContent = option1.textContent + ' is ' + countryName[randomizedFirstIndexForCap] + "'s capital city."
+                // }
+
             }
 
         })
+
         option2.addEventListener('click', () => {
             popupContainer.style.display = "block"
-            
+
             if (option2.textContent === countryCap[randomFirstIndexCountry]) {
                 happyFace.style.display = "block"
                 result.textContent = 'you are right'
             } else {
                 sadFace.style.display = "block"
-                result.textContent = 'Wrong' 
-                comment.textContent =  option2.textContent + ' is ' + countryName[randomizedSecondIndexForCap] + "'s capital city."
+                result.textContent = 'Wrong'
+
+                // if (comment.textContent = countryName[randomFirstIndexCountry] + " doesn't have a capital city.") {
+                //     return option2.textConten
+                // } else {
+                //     comment.textContent = option2.textContent + ' is ' + countryName[randomizedSecondIndexForCap] + "'s capital city."
+                // }
+
             }
         })
 
@@ -155,9 +168,14 @@ let comment = document.getElementById('comment')
                 result.textContent = 'you are right'
             } else {
                 sadFace.style.display = "block"
-                result.textContent = 'Wrong' 
-                comment.textContent = option3.textContent + ' is ' + countryName[randomizedThirdIndexForCap] + "'s capital city."
-            } 
+                result.textContent = 'Wrong'
+
+                // if (countryName[randomThirdIndexCountry] + " doesn't have a capital city.") {
+                //     return option3.textConten
+                // } else {
+                //     comment.textContent = option3.textContent + ' is ' + countryName[randomizedThirdIndexForCap] + "'s capital city."
+                // }
+            }
 
         })
 
@@ -169,7 +187,12 @@ function goNext() {
     location.reload();
 }
 
-
+function closePopUp() {
+    let popupContainer = document.getElementById('popup-container')
+    if (popupContainer.style.display = "block") {
+        popupContainer.style.display = "none"
+    }
+}
 
 // let options = document.getElementsByClassName('option')
 // console.log(options)
@@ -178,7 +201,7 @@ function goNext() {
 //     // if (alert('wrong')){
 //     //     return goNext()
 //     // }
-    
+
 // })
 
 let option1 = document.getElementById('option1')
