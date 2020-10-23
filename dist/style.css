@@ -12,28 +12,39 @@ body {
 /* pop up content */
 
 #popup-container {
-    background-color: violet;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
     height: 20%;
     position: fixed;
     top: 30%;
     left: 10%;
     width: 80%;
-    height: 30%;
+    /* height: 30%; */
     z-index: 1;
     display: none;
+    border-radius: 20%;
+    
 }
-
-#popup-container>div {
-    background-color: tomato;
+.popup {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 10%;
+    box-shadow: 0px 8px 28px 10px rgba(0,0,0,0.27);
 }
-
+#result {
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.3em;
+}
+#comment {
+    height: 50px;
+    padding: 0 2%;
+}
 .face-img img {
     height: 50px;
     width: 50px;
+    padding-top: 20%;
 }
 
 #happyFace {
@@ -48,6 +59,7 @@ body {
     background-color: teal;
     border: transparent;
     padding: 2px 20px;
+    margin: 2% 0;
     z-index: 2;
 }
 
@@ -79,6 +91,7 @@ body {
 }
 
 .option, .button-container {
+    font-size: 1.3em;
     background: white;
     display: flex;
     justify-content: space-evenly;

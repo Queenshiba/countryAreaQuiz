@@ -88,8 +88,6 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
 
         optionOne.textContent = answerCap
 
-
-
         let optionTwo = document.getElementById('option2')
         let answerOption2 = countryCap[randomizedSecondIndexForCap]
         optionTwo.textContent = answerOption2
@@ -122,21 +120,29 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
         let result = document.getElementById('result')
         let comment = document.getElementById('comment')
 
-
+        if( popupContainer.style.display = 'block' ) {
+            popupContainer.style.display = 'none'
+        } else {
+            popupContainer.style.display = 'block'
+        }
+        
 
         option1.addEventListener('click', () => {
+
             popupContainer.style.display = "block"
             if (option1.textContent === countryCap[randomFirstIndexCountry]) {
                 happyFace.style.display = "block"
+                sadFace.style.display = ""
                 result.textContent = 'you are right'
             } else {
                 sadFace.style.display = "block"
+                happyFace.style.display = ""
                 result.textContent = 'Wrong'
-                // if (countryName[randomFirstIndexCountry] + " doesn't have a capital city.") {
-                //     return option1.textConten
-                // } else {
-                //     comment.textContent = option1.textContent + ' is ' + countryName[randomizedFirstIndexForCap] + "'s capital city."
-                // }
+                if (comment.textContent === countryName[randomFirstIndexCountry] + " doesn't have a capital city.") {
+                    return option1.textConten
+                } else {
+                    comment.textContent = option1.textContent + ' is ' + countryName[randomizedFirstIndexForCap] + "'s capital city."
+                }
 
             }
 
@@ -144,19 +150,20 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
 
         option2.addEventListener('click', () => {
             popupContainer.style.display = "block"
-
             if (option2.textContent === countryCap[randomFirstIndexCountry]) {
                 happyFace.style.display = "block"
+                sadFace.style.display = ""
                 result.textContent = 'you are right'
             } else {
                 sadFace.style.display = "block"
+                happyFace.style.display = ""
                 result.textContent = 'Wrong'
 
-                // if (comment.textContent = countryName[randomFirstIndexCountry] + " doesn't have a capital city.") {
-                //     return option2.textConten
-                // } else {
-                //     comment.textContent = option2.textContent + ' is ' + countryName[randomizedSecondIndexForCap] + "'s capital city."
-                // }
+                if (comment.textContent === countryName[randomFirstIndexCountry] + " doesn't have a capital city.") {
+                    return option2.textConten
+                } else {
+                    comment.textContent = option2.textContent + ' is ' + countryName[randomizedSecondIndexForCap] + "'s capital city."
+                }
 
             }
         })
@@ -165,16 +172,18 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
             popupContainer.style.display = "block"
             if (option3.textContent === countryCap[randomFirstIndexCountry]) {
                 happyFace.style.display = "block"
+                sadFace.style.display = ""
                 result.textContent = 'you are right'
             } else {
                 sadFace.style.display = "block"
+                happyFace.style.display = ""
                 result.textContent = 'Wrong'
 
-                // if (countryName[randomThirdIndexCountry] + " doesn't have a capital city.") {
-                //     return option3.textConten
-                // } else {
-                //     comment.textContent = option3.textContent + ' is ' + countryName[randomizedThirdIndexForCap] + "'s capital city."
-                // }
+                if (comment.textContent === countryName[randomThirdIndexCountry] + " doesn't have a capital city.") {
+                    return option3.textConten
+                } else {
+                    comment.textContent = option3.textContent + ' is ' + countryName[randomizedThirdIndexForCap] + "'s capital city."
+                }
             }
 
         })
@@ -190,7 +199,7 @@ function goNext() {
 function closePopUp() {
     let popupContainer = document.getElementById('popup-container')
     if (popupContainer.style.display = "block") {
-        popupContainer.style.display = "none"
+        popupContainer.style.display = ""
     }
 }
 
