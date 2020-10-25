@@ -133,6 +133,7 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
             if (option1.textContent === countryCap[randomFirstIndexCountry]) {
                 happyFace.style.display = "block"
                 sadFace.style.display = ""
+                comment.textContent = ""
                 result.textContent = 'you are right'
             } else {
                 sadFace.style.display = "block"
@@ -153,6 +154,7 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
             if (option2.textContent === countryCap[randomFirstIndexCountry]) {
                 happyFace.style.display = "block"
                 sadFace.style.display = ""
+                comment.textContent = ""
                 result.textContent = 'you are right'
             } else {
                 sadFace.style.display = "block"
@@ -173,6 +175,7 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
             if (option3.textContent === countryCap[randomFirstIndexCountry]) {
                 happyFace.style.display = "block"
                 sadFace.style.display = ""
+                comment.textContent = ""
                 result.textContent = 'you are right'
             } else {
                 sadFace.style.display = "block"
@@ -218,17 +221,17 @@ let option2 = document.getElementById('option2')
 let option3 = document.getElementById('option3')
 
 option1.addEventListener('click', () => {
-    option1.style.backgroundColor = 'yellow'
-    option2.style.backgroundColor = ''
-    option3.style.backgroundColor = ''
+    option1.style.backgroundColor = 'lightgray'
+    // option2.style.backgroundColor = ''
+    // option3.style.backgroundColor = ''
 })
 option2.addEventListener('click', () => {
-    option2.style.backgroundColor = 'yellow'
-    option1.style.backgroundColor = ''
-    option3.style.backgroundColor = ''
+    option2.style.backgroundColor = 'lightgray'
+    // option1.style.backgroundColor = ''
+    // option3.style.backgroundColor = ''
 })
 option3.addEventListener('click', () => {
-    option3.style.backgroundColor = 'yellow'
-    option1.style.backgroundColor = ''
-    option2.style.backgroundColor = ''
+    option3.style.backgroundColor = 'lightgray'
+    // option1.style.backgroundColor = ''
+    // option2.style.backgroundColor = ''
 })
