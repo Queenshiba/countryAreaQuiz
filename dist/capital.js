@@ -134,7 +134,7 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
                 happyFace.style.display = "block"
                 sadFace.style.display = ""
                 comment.textContent = ""
-                result.textContent = 'you are right'
+                result.textContent = 'You are right'
             } else {
                 sadFace.style.display = "block"
                 happyFace.style.display = ""
@@ -155,7 +155,7 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
                 happyFace.style.display = "block"
                 sadFace.style.display = ""
                 comment.textContent = ""
-                result.textContent = 'you are right'
+                result.textContent = 'You are right'
             } else {
                 sadFace.style.display = "block"
                 happyFace.style.display = ""
@@ -176,7 +176,7 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
                 happyFace.style.display = "block"
                 sadFace.style.display = ""
                 comment.textContent = ""
-                result.textContent = 'you are right'
+                result.textContent = 'You are right'
             } else {
                 sadFace.style.display = "block"
                 happyFace.style.display = ""

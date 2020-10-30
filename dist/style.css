@@ -37,17 +37,20 @@ body {
     height: 50px;
     line-height: 50px;
     font-size: 1.3em;
+    background-color: transparent;
 }
 
 #comment {
     height: 50px;
     padding: 0 2%;
+    background-color: transparent;
 }
 
 .face-img img {
     height: 50px;
     width: 50px;
     padding-top: 20%;
+    background-color: transparent;
 }
 
 #happyFace {
@@ -95,7 +98,7 @@ body {
 
 .option, .button-container {
     font-size: 1.3em;
-    background: white;
+    background: transparent;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -105,7 +108,9 @@ body {
     padding-top: 50%;
     box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.16);
 }
-
+.option:hover {
+    background-color: #84ace160;
+}
 .lows {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(150px, 2fr));
