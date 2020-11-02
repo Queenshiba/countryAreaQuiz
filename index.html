@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>country size</title>
+</head>
+
+<body>
+    <div id="popup-container">
+        <div class="popup">
+            <div class="face-img" id="happyFace"><img src="./img/smiling-face.png" alt="happy face"></div>
+            <div class="face-img" id="sadFace"><img src="./img/sad-face.png" alt="sad face"></div>
+            <div id="result"></div>
+            <div id="comment"></div>
+            <div id="close-btn-div">
+                <button id="close-btn" onclick="goNext()">close</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="title">
+        <h1>How much do you know about our world?</h1>
+        <p>Choose a correct capital city of the country below.</p>
+    </div>
+
+    <div class="quiz-container">
+        <div id="countryNameContainer">copy</div>
+        <div class="quiz-options-container">
+            <div class="lows" id="firstLow">
+                <div class="option" id="option1">option</div>
+                <div class="option" id="option2">option</div>
+            </div>
+            <div class="lows" id="secondLow">
+                <div class="option" id="option3">option</div>
+                <div class="button-container">
+                    <button class="next-btn" onclick="goNext()">Skip to next</button>
+                </div>
+            </div>
+        </div>
+        <footer>Created by <a href="#">QShiba</a></footer>
+
+
+
+
+        <!-- old one -->
+        <!-- <div class="preset" id="select-country">
+        <h2>1.Choose a county that you are familier with. </h2>
+        <select id="selectionOfCountries">
+            <option value="">choose a country</option>
+        </select>
+
+    </div>
+
+    <div class="preset" id="select-start"></div>
+    <h2>2.Let's get started.</h2>
+    <button id="startBtn"><a href="#">START</a></button>
+    </div>
+    
+    <p>Choose a correct option below.</p>
+    <div class="yourOptions"></div>
+
+
+    <div class="quiz-container">
+        <div class="countryName-container" id="quiz-countryName"></div>
+        <div class="options-container">
+            <div class="optiion1">
+                <h3>1</h3>
+                <p class="answer" id="answer"></p>
+            </div>
+            <div class="optiion2">
+                <h3>2</h3>
+                <p class="answer"></p>
+            </div>
+            <div class="optiion3">
+                <h3>3</h3>
+                <p class="answer"></p>
+            </div>
+        </div>
+        <button id="checkAnswerBtn">Check your answer</button>
+    </div> -->
+
+        <script src="./capital.js"></script>
+</body>
+
+
+
+</html>
