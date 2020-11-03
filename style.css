@@ -1,29 +1,32 @@
 * {
     padding: 0;
     margin: 0;
-    background-color: ghostwhite;
     font-family: 'Commissioner', sans-serif;
 }
 
 body {
     height: 100vh;
+    background-image: url(./img/clay-banks-b5S4FrJb7yQ-unsplash.jpg);
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-color: #2B302E;
 }
 
 /* pop up content */
 
 #popup-container {
-    height: 20%;
-    position: fixed;
-    top: 30%;
-    left: 10%;
-    width: 80%;
-    /* height: 30%; */
+    width: 100%;
+    height: 100vh;
     z-index: 1;
     display: none;
-    border-radius: 20%;
+    position: absolute;
 }
 
 .popup {
+    margin: auto;
+    margin-top: 30%;
+    width: 40vh;
+    height: 40%;
     background: white;
     display: flex;
     flex-direction: column;
@@ -47,8 +50,8 @@ body {
 }
 
 .face-img img {
-    height: 50px;
-    width: 50px;
+    height: 90px;
+    width: auto;
     padding-top: 20%;
     background-color: transparent;
 }
@@ -79,6 +82,7 @@ body {
 
 .title p {
     padding: 20px 0;
+    color: lightgrey;
 }
 
 .title h1 {
@@ -90,32 +94,38 @@ body {
 /* quiz container */
 
 #countryNameContainer {
-    font-size: 1.5em;
+    font-size: 1.6em;
     font-weight: bold;
     text-align: center;
-    padding: 10px 0;
+    padding: 10px 0 40px 0;
+    color: white;
 }
 
 .option, .button-container {
-    font-size: 1.3em;
-    background: transparent;
+    background-color: white;
+    width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    margin: 4%;
+    height: 100%;
+    font-size: 1.3em;
     border-radius: 10%;
-    /* padding: 1rem; */
-    padding-bottom: 50%;
-    padding-top: 50%;
     box-shadow: 10px 10px 24px 0px rgba(0, 0, 0, 0.16);
 }
+
 .option:hover {
     background-color: #84ace160;
 }
+
 .lows {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 2fr));
-    grid-gap: 1rem;
-    margin: 1rem 1rem;
+    /* background-color: brown; */
+    display: flex;
+    width: 100vw;
+    height: 40vw;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10%;
 }
 
 .next-btn {
@@ -131,34 +141,39 @@ body {
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 530px) {
+    body {
+        background-image: url(./img/juliana-kozoski-IoQioGLrz3Y-unsplash.jpg);
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        background-color: #0E1714;
+    }
+}
 
-    .lows {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(100px, 1fr));
-        grid-gap: 1rem;
-        margin: 1rem 1rem;
-    }
-    .option, .button-container {
-        font-size: 1.3em;
-        background: white;
+@media only screen and (min-width: 650px) {
+    .quiz-options-container {
         display: flex;
-        justify-content: space-evenly;
-        align-items: center;
-        border-radius: 10%;
-        padding-bottom: 50%;
-        padding-top: 50%;  
+        flex-direction: row;
     }
-    .button-container {
-        background: linear-gradient(to right, #7f7fd5, #86a8e7, #74c0bb);
-        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    .lows {
+        width: 100vw;
+        height: 25vw;
+        justify-content: center;
+        align-items: center;
+        margin: 5% 0;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .option, .button-container {
+        font-size: 0.8em;
     }
 }
 
 /* footer */
 
 footer {
-    height: 50px;
+    height: 30px;
     display: flex;
     justify-content: center;
     align-items: flex-end;

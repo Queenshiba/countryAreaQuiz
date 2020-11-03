@@ -119,13 +119,15 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
         let sadFace = document.getElementById('sadFace')
         let result = document.getElementById('result')
         let comment = document.getElementById('comment')
+        let compliments = ['You are such a genius!', "You're a smart cookie.", "Your creative potential seems limitless."]
+        console.log(compliments[arrFirstNum])
 
-        if( popupContainer.style.display = 'block' ) {
+        if (popupContainer.style.display = 'block') {
             popupContainer.style.display = 'none'
         } else {
             popupContainer.style.display = 'block'
         }
-        
+
 
         option1.addEventListener('click', () => {
 
@@ -133,15 +135,16 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
             if (option1.textContent === countryCap[randomFirstIndexCountry]) {
                 happyFace.style.display = "block"
                 sadFace.style.display = ""
-                comment.textContent = ""
-                result.textContent = 'You are right'
+                comment.textContent = compliments[arrFirstNum]
+                result.textContent = 'You are right!'
             } else {
                 sadFace.style.display = "block"
                 happyFace.style.display = ""
                 result.textContent = 'Wrong'
-                if (comment.textContent === countryName[randomFirstIndexCountry] + " doesn't have a capital city.") {
-                    return option1.textConten
-                } else {
+                if (option1.textContent === countryName[randomFirstIndexCountry] + " doesn't have a capital city.") {
+                    comment.textContent = option1.textContent + "That's not true."
+                }
+                else {
                     comment.textContent = option1.textContent + ' is ' + countryName[randomizedFirstIndexForCap] + "'s capital city."
                 }
 
@@ -154,16 +157,17 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
             if (option2.textContent === countryCap[randomFirstIndexCountry]) {
                 happyFace.style.display = "block"
                 sadFace.style.display = ""
-                comment.textContent = ""
-                result.textContent = 'You are right'
+                comment.textContent = compliments[arrFirstNum]
+                result.textContent = 'You are right!'
             } else {
                 sadFace.style.display = "block"
                 happyFace.style.display = ""
                 result.textContent = 'Wrong'
 
-                if (comment.textContent === countryName[randomFirstIndexCountry] + " doesn't have a capital city.") {
-                    return option2.textConten
-                } else {
+                if (option2.textContent === countryName[randomFirstIndexCountry] + " doesn't have a capital city.") {
+                    comment.textContent = option2.textContent + "That's not true."
+                }
+                else {
                     comment.textContent = option2.textContent + ' is ' + countryName[randomizedSecondIndexForCap] + "'s capital city."
                 }
 
@@ -175,15 +179,15 @@ fetch("https://ajayakv-rest-countries-v1.p.rapidapi.com/rest/v1/all", {
             if (option3.textContent === countryCap[randomFirstIndexCountry]) {
                 happyFace.style.display = "block"
                 sadFace.style.display = ""
-                comment.textContent = ""
-                result.textContent = 'You are right'
+                comment.textContent = compliments[arrFirstNum]
+                result.textContent = 'You are right!'
             } else {
                 sadFace.style.display = "block"
                 happyFace.style.display = ""
                 result.textContent = 'Wrong'
 
-                if (comment.textContent === countryName[randomThirdIndexCountry] + " doesn't have a capital city.") {
-                    return option3.textConten
+                if (option3.textContent === countryName[randomThirdIndexCountry] + " doesn't have a capital city.") {
+                    comment.textContent = option3.textContent + "That's not true."
                 } else {
                     comment.textContent = option3.textContent + ' is ' + countryName[randomizedThirdIndexForCap] + "'s capital city."
                 }
